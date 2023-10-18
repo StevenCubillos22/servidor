@@ -10,30 +10,32 @@
 
     $num1 = $_POST["num1"];
     $num2 = $_POST["num2"];
-
+    
     $numeros = array();
 
+    //Genera array
     for ($i = 0; $i < 100; $i++) {
-    $numeros[$i] = rand(0, 60);
+    $numeros[$i] = rand(0, 20);
     echo $numeros[$i]." - ";
     }
 
-
-    foreach ($numeros as $losdelForeach1 ){
-        if ($numeros == $num1) {
-            $numeros == $num2;
+    //Hacemos un bucle for
+    for ($i=0; $i < 100; $i++){
+        if ($numeros[$i] == $num1) {
+            $num1 = $num2;
         }
     }
 
     echo "<br><br>Lista modificada: ";
     echo "<br>";
+    echo "<br>";
 
-    foreach ($numeros as $losdelForeach2 ){
+    for ($i=0; $i <100; $i++ ){
 
-        if ($numeros == $num2){
-            echo "<b>".$num2."</b>";
+        if ($numeros[$i] == $num2){
+            echo "<b>".$num2."</b> - ";
         } else {
-            echo $losdelForeach2." - ";
+            echo $numeros[$i]." - ";
         }
 
     }
