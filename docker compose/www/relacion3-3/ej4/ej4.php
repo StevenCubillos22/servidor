@@ -19,7 +19,7 @@
     echo $numeros[$i]." - ";
     }
 
-    //Hacemos un bucle for
+    //Hacemos un bucle for si el num1 es el 2, lo cambiamos por este
     for ($i=0; $i < 100; $i++){
         if ($numeros[$i] == $num1) {
             $num1 = $num2;
@@ -31,7 +31,6 @@
     echo "<br>";
 
     for ($i=0; $i <100; $i++ ){
-
         if ($numeros[$i] == $num2){
             echo "<b>".$num2."</b> - ";
         } else {
