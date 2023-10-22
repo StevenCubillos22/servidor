@@ -15,7 +15,6 @@ $i=0;
 $nombres = array('Jose','Cristobal','María','Fernando','Martín');
 
 
-
 do {
     echo"Conozco a alguien llamado ".$nombres[$i]."<br>";
     $i++;
