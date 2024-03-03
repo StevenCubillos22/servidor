@@ -10,9 +10,8 @@
 <?php
 
 
-
 //GENERA ARRAY
-function generaArrayInt($n, $min, $max) {
+function generaArrayInt($tam, $min, $max) {
     $array = [];
     for ($i = 0; $i < $n; $i++) {
         $array[] = rand($min, $max);
@@ -111,24 +110,33 @@ function mediaArray($array){
    function rotaDerechaArray($array, $num){
 
     $arrayModificado=[];
+    $count = count($array);
 
-    for ($i = count($array) - $num; $i < count($array); $i++) {
-        $arrayRotado[] = $array[$i];
-      }
-  
-      for ($i = 0; $i < count($array) - $num; $i++) {
-        $arrayRotado[] = $array[$i];
-      }
-  
-      return $arrayRotado;
+    // si el numero es mayor que el tamaño del array, se calcula el resto para que no "desborde" el array - ejemplo: si "n" = 7 y el tamaño del array 5, sería lo mismo que rotar el array 2 posiciones únicamente
+    if ($num >= $count) {
+      $num = $num % $count;
+    }
 
-   }
+    for ($i = $count - $num; $i < $count; $i++) {
+      $arrayRotado[] = $array[$i];
+    }
+
+    for ($i = 0; $i < $count - $num; $i++) {
+      $arrayRotado[] = $array[$i];
+    }
+
+    return $arrayRotado;
+}
 
 //ROTA IZQUIERDA ARRAY
 
    function rotaIzquierdaArray($array, $num){
 
     $arrayModificado=[];
+
+    if ($num >= $count) {
+      $num = $num % $count;
+    }
 
     for ($i = count($array) - $num; $i < count($array); $i++) {
         $arrayRotado[] = $array[$i];
@@ -142,17 +150,46 @@ function mediaArray($array){
 
    }
 
+   // Genera un array con valores aleatorios
+
+   $arrayCreado = array();
+    for ($i = 0; $i < 40; $i++) {
+    $arrayCreado[$i] = rand(0, 120);
+  }
 
 
+// Muestra el array original
+echo "Array Original: " . implode(", ", $arrayCreado) . "<br>";
 
+// Encuentra el mínimo del array
+echo "Mínimo: " . encontrarMinimo($arrayCreado) . "<br>";
 
+// Encuentra el máximo del array
+echo "Máximo: " . encontrarMaximo($arrayCreado) . "<br>";
 
+// Calcula la media del array
+echo "Media: " . mediaArray($arrayCreado) . "<br>";
 
+// Comprueba si un número está en el array
+$numero = 42;
+echo "¿El número $numero está en el array? " . (estaArrayInt($arrayCreado, $numero) ? 'Sí' : 'No') . "<br>";
 
+// Encuentra la posición de un número en el array
+echo "Posición del número $numero en el array: " . posicionEnArray($arrayCreado, $numero) . "<br>";
 
+// Crea un array invertido
+$arrayInvertido = arrayVolteado($arrayCreado);
+echo "Array Invertido: " . implode(", ", $arrayInvertido) . "<br>";
 
+// Rota el array hacia la derecha
+$posicionesDerecha = 2;
+$arrayRotadoDerecha = rotaDerechaArray($arrayCreado, $posicionesDerecha);
+echo "Array Rotado a la Derecha ($posicionesDerecha posiciones): " . implode(", ", $arrayRotadoDerecha) . "<br>";
 
-
+// Rota el array hacia la izquierda
+$posicionesIzquierda = 3;
+$arrayRotadoIzquierda = rotaIzquierdaArray($arrayCreado, $posicionesIzquierda);
+echo "Array Rotado a la Izquierda ($posicionesIzquierda posiciones): " . implode(", ", $arrayRotadoIzquierda) . "<br>";
 ?>
     
 </body>

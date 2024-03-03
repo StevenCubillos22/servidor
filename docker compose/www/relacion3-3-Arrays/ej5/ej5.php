@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
 
         table {
@@ -26,8 +25,6 @@
         .columna2 {
             background-color: lightgreen;
         }
-
-
 
     </style>
 </head>
@@ -51,8 +48,8 @@ foreach ($numeros as $datos) {
     }
 }
 
-echo "<table border='1'>";
-echo "<tr><th> Números pares </th></tr>";
+echo "<table border='3'>";
+echo "<tr><th> NÚMEROS PARES </th></tr>";
 for ($i = 0; $i < count($par); $i++) {
     echo "<tr><td class='columna1'>".$par[$i]."</td></tr>";
 }
@@ -60,8 +57,8 @@ echo "</table>";
 
 echo "<br>";
 
-echo "<table border='1'>";
-echo "<tr><th> Números impares </th></tr>";
+echo "<table border='3'>";
+echo "<tr><th> NÚMEROS IMPARES </th></tr>";
 for ($i = 0; $i < count($impar); $i++) {
     echo "<tr><td class='columna2'>".$impar[$i]."</td></tr>";
 }

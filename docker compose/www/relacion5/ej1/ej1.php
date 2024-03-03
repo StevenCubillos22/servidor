@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encontrar Máximo y Mínimo</title>
+    <title>Biblioteca de funciones PHP</title>
 </head>
 
 <body>
@@ -25,7 +25,8 @@
     $num1 = $_POST['num1'];
     $num2 = $_POST['num2'];
 
-
+    ///FUNCIONES------------
+    
     //FUNCION EsCAPICUA
     function esCapicua($num){
         $numeroInvertido = strrev((string)$num);
@@ -52,23 +53,18 @@
 
     //FUNCION SIGUIENTE PRIMO
 
-    function siguientePrimo($num1){
-
+    function siguientePrimo($num){
+    
         do {
-
-        } while (!esPrimo($num1++))
-
-      return true;
+        $num++;
+        } while (!esPrimo($num));
+      return $num;
     }
 
     //FUNCION POTENCIA 
 
-    function potentia($base, $exponente){
-        $num=1;
-        for ($i=0; i<$exponente; i++){
-            $num = $num * $base;
-        }
-        return $num;
+    function potencia($base, $exponente){
+    return pow($base, $exponente); //pow es una funcion que se desarrolla como potencia
     }
 
     //FUNCION DIGITOS
@@ -92,29 +88,19 @@
 
     //6.FUNCIÓN VOLTEA
     function voltea($prueba){
-
-        $volteado = 0;
-
-        while ($prueba){
-
-            $volteado= ($volteado * 10) + ($prueba % 10);
-            $prueba = $prueba/10;
-
-        }
-        return $volteado;
+        return (int)strrev((string)$prueba);
     }
+
 
     //7.FUNCIÓN DIGITO-N
     function digitoN ($numero, $digito){
 
         return substr($numero, $digito, $length = 1);
-
-
     }
 
     //8.POSICION DE DIGITO
 
-    function posicionDeDigito ($x, $i){
+    function posicionDeDigito ($num, $digito){
         $num_str = (string)$num;
         $posicion = -1;
 
@@ -129,7 +115,7 @@
 
     //9.QUITAR POR DETRAS
 
-    function quitarPorDetras($num, $x){
+    function quitarPorDetras($num, $n){
         $num_string = (string)$num;
         $num_string = substr($num_string, 0, -$n);
         return (int)$num_string;
@@ -137,14 +123,14 @@
 
     //10.QUITAR POR DELANTE
 
-    function quitarPorDelante($num, $x){
+    function quitarPorDelante($num, $n){
         $num_string = (string)$num;
         $num_string = substr($num_string, $n);
         return (int)$num_string;
 
     }
 
-    //11PEGAR POR DETRAS
+    //11.PEGAR POR DETRAS
 
     function pegarPorDetras($num, $x){
         return (int)($num . $x);
@@ -158,7 +144,8 @@
     }
 
 
-    //13.TROZO DE NUMERO
+    //13.TROZO DE NUMERO Toma como parámetros las posiciones inicial y final dentro de
+    //un número y devuelve el trozo correspondiente
 
     function trozoDeNumero($num, $principio, $final){
         $num_string = (string)$num;
@@ -167,14 +154,30 @@
 
     }
 
-    //14. JUNTAR NUMEROS
+    //14. JUNTAR NUMEROS Pega dos números para formar uno.
 
     function juntarNum($num1, $num2){
         return (int)($num1 . $num2);
     }
 
 
+    echo "Número 1: $num1<br>";
+    echo "Número 2: $num2<br>";
 
+    echo "Es capicúa: " . (esCapicua($num1) ? 'Sí, lo es' : 'No lo es') . "<br>";
+    echo "Es primo: " . (esPrimo($num1) ? 'Sí, lo es' : 'No lo es') . "<br>";
+    echo "Siguiente primo: " . siguientePrimo($num1) . "<br>";
+    echo "Potencia: " . potencia($num1, $num2) . "<br>";
+    echo "Número de dígitos: " . digitos($num1) . "<br>";
+    echo "Número volteado: " . voltea($num1) . "<br>";
+    echo "Dígito en la posición 2: " . digitoN($num1, 2) . "<br>";
+    echo "Posición del dígito 5: " . posicionDeDigito($num1, 5) . "<br>";
+    echo "Quitar 2 dígitos por detrás: " . quitarPorDetras($num1, 2) . "<br>";
+    echo "Quitar 2 dígitos por delante: " . quitarPorDelante($num1, 2) . "<br>";
+    echo "Pegar 23 por detrás: " . pegarPorDetras($num1, 23) . "<br>";
+    echo "Pegar 23 por delante: " . pegarPorDelante($num1, 23) . "<br>";
+    echo "Trozo del número (1-3): " . trozoDeNumero($num1, 1, 3) . "<br>";
+    echo "Juntar números: " . juntarNum($num1, $num2) . "<br>";
 
 ?>
 

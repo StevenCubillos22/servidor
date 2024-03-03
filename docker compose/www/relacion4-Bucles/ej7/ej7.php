@@ -16,29 +16,28 @@ $intentos=4;
 $encontrada=false;
 
 
- while (!$encontrada && $intentos<4) {
+  do {
 
     if ($num1==9889){
         $encontrada=true;
 
     } else {
         echo "Lo siento, esta combinacion no es correcta";
-        intentos--;
     }
+
+    $intentos--;
     
-} 
+} while ((!$encontrada) && ($intentos>0)); 
 
 
-if (encontrada){
+if ($encontrada){
+    echo "<b>Enhorabuena, has abierto la caja fuerte</b>";
 
 } else {
+
+    echo "Las 4 oportunidades se han agotado, lo siento mucho";
     
 }
-
-
-
-
-echo "<b>CONGRATS!</b>"
 
 ?>
     

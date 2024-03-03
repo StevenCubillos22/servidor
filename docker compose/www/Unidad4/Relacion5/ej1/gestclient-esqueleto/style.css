@@ -1,0 +1,57 @@
+/* Reinicia algunos estilos predeterminados */
+body, h1, h2, table {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  #content-wrapper {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #title {
+    color: #333;
+  }
+  
+  #subtitle {
+    color: #555;
+  }
+  
+  .column-title {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .client-td {
+    padding: 8px;
+  }
+  
+  #last-client-td {
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  #remove-button {
+    background-color: #dc3545;
+  }
+  
+  img {
+    vertical-align: middle;
+  }

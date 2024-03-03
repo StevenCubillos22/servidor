@@ -14,7 +14,7 @@
 include("../ej1/ej1.php");
 
 function decimalAbinario($decimal) {
-    return decbin($decimal);
+    return decbin($decimal); //convierte de decimal a binario
 }
 
 

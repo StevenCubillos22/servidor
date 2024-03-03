@@ -31,6 +31,12 @@ if(isset($_GET['n1'])) { //con
 
 
 ?>
+
+
+
+
+
+
     
 </body>
 </html>

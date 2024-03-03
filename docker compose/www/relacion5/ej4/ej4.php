@@ -14,7 +14,7 @@
 include("../ej1/ej1.php");
 
 function binarioADecimal($binario) {
-    return bindec($binario);
+    return bindec($binario); //bindec covierte de binario a decimal
 }
 
 

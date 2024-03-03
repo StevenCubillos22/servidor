@@ -11,7 +11,6 @@
 
 
 
-
 $palabra = $_POST["palabra"];
 
 $diccionario = array(
@@ -49,22 +48,6 @@ if(isset($palabra)){
         echo "<p>La palabra <b>$palabra</b> no se encuentra disponible en el diccionario. Disculpe las molestias :( </p>";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

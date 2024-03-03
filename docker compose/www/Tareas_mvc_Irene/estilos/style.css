@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(180deg,  rgb(189, 217, 246), rgb(235, 245, 255));
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+p{
+    word-wrap: break-word;
+    max-width: 100%;
+}
+h1{
+    border-bottom: 2px solid rgb(110, 151, 194);
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    width: 100%;
+    color:rgb(47, 97, 150);
+}
+img.colgante{
+    margin-bottom: -20px;
+    display: block;
+    margin: auto;
+}
+div.principal{
+    width: fit-content;
+    margin: 80px auto;
+    margin-bottom: 0;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(3, 47, 79, 0.2), 0 6px 20px 0 rgba(3, 47, 79, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+
+div.contenido{
+    text-align: left;
+    margin: auto;
+    width:fit-content;
+    padding: 20px;
+}
+div.boton{
+    background-color: rgb(110, 151, 194);
+    border-style: outset;
+    color:aliceblue;
+    border-color:  rgb(110, 151, 194);
+    border-radius: 3px;
+    width:fit-content;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+}
+table{
+    padding: 15px;
+    border-color:  rgb(110, 151, 194);
+    border-style: solid;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    border-spacing: 5px;
+    background-image: url(../img/fondo_tablon.png);
+    background-size: 400px 200px;
+}
+tr,td{
+    padding: 10px;
+    background-color: rgb(177, 216, 239);
+    border:none;
+}
+th{
+    padding: 10px;
+    background-color: rgb(110, 151, 194);
+    color: aliceblue;
+}
+
+input{
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(110, 151, 194);
+    width: 100%;
+}
+h2{
+    color:rgb(47, 97, 150);
+    border-bottom: 2px solid rgb(110, 151, 194);
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+h3{
+    color:rgb(47, 97, 150);
+    font-size: 25px;
+}
+
+button{
+    background-color: rgb(110, 151, 194);
+    border-style: outset;
+    color:aliceblue;
+    border-color:  rgb(110, 151, 194);
+    border-radius: 3px;
+    width:fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+a{
+    text-decoration: none;
+    color:  rgb(110, 151, 194);
+    font-weight: bold;
+}
+a.boton{
+    text-decoration: none;
+    color:  aliceblue;
+    font-weight: bold;
+}
+
+footer{
+    background-color: aliceblue;
+    padding: 14px;
+    border-top: 2px solid rgb(110, 151, 194);
+}
