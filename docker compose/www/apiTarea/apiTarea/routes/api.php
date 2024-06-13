@@ -17,12 +17,14 @@ use App\Http\Controllers\EtiquetaController;
 |
 */
 
-Route::resource('/tareas', TareaController::class);
-Route::resource('/etiquetas', EtiquetaController::class);
+
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function(){
+
+    Route::resource('/tareas', TareaController::class);
+    Route::resource('/etiquetas', EtiquetaController::class);
     Route::get('logout', [AuthController::class, 'logout']);
 });

@@ -74,6 +74,7 @@ class EtiquetaController extends Controller
      */
     public function destroy(Etiqueta $etiqueta)
     {
+        
         $etiqueta->delete();
         return response()->json(['success' => true], 200);
     }

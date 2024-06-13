@@ -26,3 +26,5 @@ class TareaResource extends JsonResource
         ];
     }
 }
+
+
